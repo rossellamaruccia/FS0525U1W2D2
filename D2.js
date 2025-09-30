@@ -135,8 +135,15 @@ const me = {
   name: 'John',
   lastName: 'Doe',
   skills: ['javascript', 'html', 'css'],
-  city: 'Toronto'
 }
+
+me.city = true
+
+console.log(me)
+
+me.city = "Toronto"
+console.log(me)
+
 
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
@@ -162,5 +169,5 @@ console.log(newArray)
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-newArray.splice(8, 1, "100")
+newArray.splice(9, 10, "100")
 console.log(newArray)
