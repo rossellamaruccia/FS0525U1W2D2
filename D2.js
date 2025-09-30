@@ -87,22 +87,31 @@ if (totalShoppingCart * 20 / 100 > 50) {
   Alla fine mostra il risultato in console.
 */
 
-const numbers = [14, 555, 2]
-numbers.sort
-console.log(numbers.reverse)
+let insiemeDiNumeri = {
+  n1:324,
+  n2:543,
+  n3:780
+}
+
+// insiemeDiNumeri.sort(function(a, b){return a - b} )
+// console.log("array in ordine decrescente: ", insiemeDiNumeri.reverse())
 
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log(typeof insiemeDiNumeri)
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
-
-/* SCRIVI QUI LA TUA RISPOSTA */
+let pariDispari = 67
+if (pariDispari % 2 > 0) {
+  console.log("dispari")
+} else {
+  console.log("pari")
+}
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
