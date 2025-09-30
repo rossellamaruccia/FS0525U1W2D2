@@ -58,10 +58,13 @@ if (comeSiFa[0] === 8) {
 */
 
 let totalShoppingCart
+totalShoppingCart = 20
+let totalCost = totalShoppingCart + 10
 if (totalShoppingCart > 50) {
   console.log("free shipping applied")
 } else {
-  console.log("Shipping fee = 10")
+  //console.log("Shipping fee = 10")
+  console.log("Shipping fee applied, total cost is: ", totalCost)
 }
 
 
@@ -69,8 +72,14 @@ if (totalShoppingCart > 50) {
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
+//totalShoppingCart = 356 per verificare la prima condizione
+if (totalShoppingCart * 20 / 100 > 50) {
+  console.log("free shipping applied")
+} else {
+  //console.log("Shipping fee = 10")
+  console.log("Shipping fee applied, total cost is: ", totalCost)
+}
 
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
