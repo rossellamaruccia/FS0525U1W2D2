@@ -25,10 +25,7 @@ if (n === x) {
 
 let numeroFornito = 35
 // numeroFornito = 26 per verificare condizione con valore false
-if (numeroFornito % 5 > 0){
-  console.log("non divisibile")
-}
-else {
+if (numeroFornito % 5 === 0){
   console.log("divisibile per 5")
 }
 
@@ -47,8 +44,16 @@ if (comeSiFa[0] === 8) {
   console.log("bene")
 } else if (comeSiFa[0] + comeSiFa[1] === 8) {
   console.log("bene")
+} else if (comeSiFa[0] - comeSiFa[1] === 8) {
+  console.log("bene")
 } else {
   console.log("male")
+}
+
+let n5 = 1
+let n6 = 7
+if (n5 === 8 || n6 === 8 || n5 + n6 === 8 || n5 - n6 === 8) {
+  console.log("bene")
 }
 
 /* ESERCIZIO 5
@@ -57,14 +62,13 @@ if (comeSiFa[0] === 8) {
   Crea un algoritmo che determini l'ammontare totale che deve essere addebitato all'utente per il checkout.
 */
 
-let totalShoppingCart
-totalShoppingCart = 20
-let totalCost = totalShoppingCart + 10
-if (totalShoppingCart > 50) {
-  console.log("free shipping applied")
+let shoppingCart = 20
+let shippingCost = 10
+if (shoppingCart > 50) {
+  console.log("free shipping applied, total cost is:", shoppingCart)
 } else {
   //console.log("Shipping fee = 10")
-  console.log("Shipping fee applied, total cost is: ", totalCost)
+  console.log("Shipping fee applied, total cost is: ", shoppingCart + shippingCost,)
 }
 
 
@@ -72,14 +76,17 @@ if (totalShoppingCart > 50) {
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
-//totalShoppingCart = 356 per verificare la prima condizione
-if (totalShoppingCart * 20 / 100 > 50) {
+
+//ShoppingCart = 356 per verificare la prima condizione
+shoppingCart = shoppingCart * 0.8
+if (shoppingCart > 50) {
   console.log("free shipping applied")
 } else {
   //console.log("Shipping fee = 10")
-  console.log("Shipping fee applied, total cost is: ", totalCost)
+  console.log("Shipping fee applied, total cost is: ", shoppingCart + shippingCost,)
 }
 
+// altra soluzione: shoppingcart > 50 ? shoppingcart : shoppingcart + 10
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -87,11 +94,13 @@ if (totalShoppingCart * 20 / 100 > 50) {
   Alla fine mostra il risultato in console.
 */
 
-let insiemeDiNumeri = {
-  n1:324,
-  n2:543,
-  n3:780
-}
+let num1 = 356
+let num2 = 35602
+let num3 = 68
+
+if (num1 > num2) {
+  
+ }
 
 // insiemeDiNumeri.sort(function(a, b){return a - b} )
 // console.log("array in ordine decrescente: ", insiemeDiNumeri.reverse())
@@ -101,7 +110,8 @@ let insiemeDiNumeri = {
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
-console.log(typeof insiemeDiNumeri)
+console.log(typeof num2)
+console.log(typeof randomNumbers)
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
@@ -115,15 +125,17 @@ if (pariDispari % 2 > 0) {
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
-  let val = 7
-  if (val < 10) {
-      console.log("Meno di 10");
-    } else if (val < 5) {
+  */
+//invertite le condizioni
+  val = 3
+  if (val < 5) {
       console.log("Meno di 5");
+    } else if (val < 10) {
+      console.log("Meno di 10");
     } else {
       console.log("Uguale a 10 o maggiore");
     }
-*/
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -136,10 +148,6 @@ const me = {
   lastName: 'Doe',
   skills: ['javascript', 'html', 'css'],
 }
-
-me.city = true
-
-console.log(me)
 
 me.city = "Toronto"
 console.log(me)
@@ -156,6 +164,8 @@ delete me.lastName
 */
 
 delete me.skills[2]
+// oppure me.skills.pop()
+// oppure me.skills.slice(2,1)
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
@@ -169,5 +179,5 @@ console.log(newArray)
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
-newArray.splice(9, 10, "100")
+newArray.splice(9, 1, "100")
 console.log(newArray)
